@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: WorldOfWarcraftUZ/website
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "cover", label: "Cover Image", widget: "image" }
+      - { name: "body", label: "Body", widget: "markdown" }
